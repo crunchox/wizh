@@ -26,6 +26,3 @@ class _TripPageState extends State<TripPage> {
     ));
   }
 }
-
-git config --global user.email "you@example.com"
-  git config --global user.name "Crunchox"
