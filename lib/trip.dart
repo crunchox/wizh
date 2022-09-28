@@ -10,19 +10,19 @@ class TripPage extends StatefulWidget {
 }
 
 class _TripPageState extends State<TripPage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff252525),
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          children: <Widget>[ Text(widget.title), Image.asset('assets/images/warning.png')
+        backgroundColor: const Color(0xff252525),
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
+        body: Center(
+            child: Column(
+          children: <Widget>[
+            Text(widget.title),
+            Image.asset('assets/images/warning.png')
           ],
-        )
-    ));
+        )));
   }
 }
