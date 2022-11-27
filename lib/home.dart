@@ -52,7 +52,7 @@ class _HomeState extends State<Home> {
                         height: 280,
                       ),
                       ElevatedButton(
-                          child: const Text('Button label'),
+                          child: const Text('Back'),
                           onPressed: () {
                             Navigator.pop(context);
                           }),
@@ -95,9 +95,11 @@ class _HomeState extends State<Home> {
                                     const SizedBox(
                                       width: 13,
                                     ),
-                                    Column(
+                                    Flexible(
+                                        child: Column(
                                       children: [
                                         Text(news.title,
+                                            textAlign: TextAlign.center,
                                             style: CustomTextStyle()
                                                 .s13cWhitew500()),
                                         Text("by ${news.author}",
@@ -108,7 +110,7 @@ class _HomeState extends State<Home> {
                                             style: CustomTextStyle()
                                                 .s13cWhitew400Italic()),
                                       ],
-                                    )
+                                    )),
                                   ])),
                               onTap: () {
                                 ScaffoldMessenger.of(context).showSnackBar(
@@ -130,13 +132,15 @@ class _HomeState extends State<Home> {
                           return Builder(
                             builder: (BuildContext context) {
                               return Container(
+                                  alignment: Alignment.center,
                                   width: MediaQuery.of(context).size.width,
                                   margin: const EdgeInsets.symmetric(
                                       horizontal: 5.0),
                                   decoration:
                                       const BoxDecoration(color: Colors.amber),
                                   child: Text(
-                                    'text $i',
+                                    'Tempat Wisata Horror se-Indonesia $i',
+                                    textAlign: TextAlign.center,
                                     style: CustomTextStyle().s18cWhitew700(),
                                   ));
                             },
@@ -168,13 +172,15 @@ class _HomeState extends State<Home> {
                           return Builder(
                             builder: (BuildContext context) {
                               return Container(
+                                  alignment: Alignment.center,
                                   width: MediaQuery.of(context).size.width,
                                   margin: const EdgeInsets.symmetric(
                                       horizontal: 5.0),
                                   decoration: const BoxDecoration(
                                       color: Colors.blueAccent),
                                   child: Text(
-                                    'text $i',
+                                    textAlign: TextAlign.center,
+                                    'Gathering  Backpacker at Comodo Island $i',
                                     style: CustomTextStyle().s18cWhitew700(),
                                   ));
                             },
@@ -206,13 +212,15 @@ class _HomeState extends State<Home> {
                           return Builder(
                             builder: (BuildContext context) {
                               return Container(
+                                  alignment: Alignment.center,
                                   width: MediaQuery.of(context).size.width,
                                   margin: const EdgeInsets.symmetric(
                                       horizontal: 5.0),
                                   decoration:
                                       const BoxDecoration(color: Colors.green),
                                   child: Text(
-                                    'text $i',
+                                    'Prestige Hotel $i',
+                                    textAlign: TextAlign.center,
                                     style: CustomTextStyle().s18cWhitew700(),
                                   ));
                             },
