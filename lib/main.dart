@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wizh/login.dart';
 import 'package:wizh/trip.dart';
 
 void main() {
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const NoTripPage(title: 'Trip'),
+      home: const Login(),
     );
   }
 }
