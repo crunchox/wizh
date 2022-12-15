@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:wizh/register.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -201,12 +202,20 @@ class _LoginState extends State<Login> {
                       SizedBox(
                         width: 2,
                       ),
-                      Text(
-                        "Create New",
-                        style: GoogleFonts.readexPro(
-                            fontSize: 13,
-                            fontWeight: FontWeight.w600,
-                            color: Color(0xFF8A9178)),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Register()));
+                        },
+                        child: Text(
+                          "Create New",
+                          style: GoogleFonts.readexPro(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xFF8A9178)),
+                        ),
                       )
                     ],
                   ),
