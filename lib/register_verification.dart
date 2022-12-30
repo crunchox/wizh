@@ -55,6 +55,12 @@ class _RegisterVerificationState extends State<RegisterVerification> {
   }
 
   @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFD4BB87),
@@ -143,13 +149,13 @@ class _RegisterVerificationState extends State<RegisterVerification> {
                     obscuringCharacter: '*',
                     blinkWhenObscuring: true,
                     animationType: AnimationType.fade,
-                    validator: (v) {
-                      if (v!.length < 3) {
-                        return "I'm from validator";
-                      } else {
-                        return null;
-                      }
-                    },
+                    // validator: (v) {
+                    //   if (v!.length < 3) {
+                    //     return "I'm from validator";
+                    //   } else {
+                    //     return null;
+                    //   }
+                    // },
                     pinTheme: PinTheme(
                         shape: PinCodeFieldShape.underline,
                         borderRadius: BorderRadius.circular(5),
@@ -174,14 +180,14 @@ class _RegisterVerificationState extends State<RegisterVerification> {
                     //     blurRadius: 10,
                     //   )
                     // ],
-                    onCompleted: (v) {
-                      debugPrint("Completed");
-                    },
+                    // onCompleted: (v) {
+                    //   debugPrint("Completed");
+                    // },
                     // onTap: () {
                     //   print("Pressed");
                     // },
                     onChanged: (value) {
-                      debugPrint(value);
+                      // debugPrint(value);
                       setState(() {
                         currentText = value;
                       });
@@ -204,10 +210,16 @@ class _RegisterVerificationState extends State<RegisterVerification> {
                 child: ElevatedButton(
                     onPressed: () {
                       if (currentText == "1234") {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Congratulations()));
+                        // Navigator.pushReplacement(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (context) => Congratulations()));
+                        Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Congratulations()),
+                          (Route<dynamic> route) => false,
+                        );
                       }
                     },
                     child: Text(

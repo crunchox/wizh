@@ -21,8 +21,13 @@ class _CongratulationsState extends State<Congratulations> {
   }
 
   route() {
-    Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => Loading()));
+    // Navigator.pushReplacement(
+    //     context, MaterialPageRoute(builder: (context) => Loading()));
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (context) => Loading()),
+      (Route<dynamic> route) => false,
+    );
   }
 
   @override

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:wizh/home_bar.dart';
 import 'package:wizh/login.dart';
+import 'package:wizh/new_trip.dart';
 import 'package:wizh/onboarding.dart';
+import 'package:wizh/register_verification.dart';
 import 'package:wizh/trip.dart';
 
 void main() {
@@ -16,6 +19,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        bottomSheetTheme:
+            BottomSheetThemeData(backgroundColor: Colors.transparent),
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
@@ -27,7 +32,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const Onboarding(),
+      home: const HomeLayout(),
     );
   }
 }

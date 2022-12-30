@@ -1,7 +1,12 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:wizh/home_bar.dart';
+import 'package:wizh/new_trip.dart';
+import 'package:wizh/trip.dart';
 
 class Loading extends StatefulWidget {
   const Loading({super.key});
@@ -11,6 +16,28 @@ class Loading extends StatefulWidget {
 }
 
 class _LoadingState extends State<Loading> {
+  startTime() async {
+    var duration = new Duration(seconds: 5);
+    return new Timer(duration, route);
+  }
+
+  route() {
+    // Navigator.pushReplacement(
+    //     context, MaterialPageRoute(builder: (context) => NewTrip()));
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (context) => HomeLayout()),
+      (Route<dynamic> route) => false,
+    );
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    startTime();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
