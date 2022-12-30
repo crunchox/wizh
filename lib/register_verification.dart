@@ -6,6 +6,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:wizh/congratulation.dart';
 
 class RegisterVerification extends StatefulWidget {
   const RegisterVerification({super.key});
@@ -28,6 +29,7 @@ class _RegisterVerificationState extends State<RegisterVerification> {
   int _start = 10;
 
   void startTimer() {
+    _start = 10;
     const oneSec = const Duration(seconds: 1);
     Timer _timer = new Timer.periodic(
       oneSec,
@@ -202,7 +204,10 @@ class _RegisterVerificationState extends State<RegisterVerification> {
                 child: ElevatedButton(
                     onPressed: () {
                       if (currentText == "1234") {
-                        Navigator.pop(context);
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Congratulations()));
                       }
                     },
                     child: Text(
@@ -238,12 +243,15 @@ class _RegisterVerificationState extends State<RegisterVerification> {
                         style: GoogleFonts.readexPro(
                             fontSize: 12, fontWeight: FontWeight.w500),
                       )
-                    : Text(
-                        "Resend",
-                        style: GoogleFonts.readexPro(
-                            color: Color(0xFF8A9178),
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500),
+                    : GestureDetector(
+                        onTap: () => startTimer(),
+                        child: Text(
+                          "Resend",
+                          style: GoogleFonts.readexPro(
+                              color: Color(0xFF8A9178),
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500),
+                        ),
                       ),
               ],
             )
