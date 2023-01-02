@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "823920890612",
+    "project_id": "wizh-ef999",
+    "storage_bucket": "wizh-ef999.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:823920890612:android:415ccc431d9d96c00384a1",
+        "android_client_info": {
+          "package_name": "com.example.wizh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "823920890612-pb85mv5n66kgpe10hgobj0aamkr3ar4u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wizh",
+            "certificate_hash": "451daa488ee34e4c800b6cef8a60041fdf5104e7"
+          }
+        },
+        {
+          "client_id": "823920890612-n3asl91tre5ta0vls8anqip2hd44lu77.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRav7T8vlMIhA5Jg1azSGzIeGx6hQ062M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "823920890612-n3asl91tre5ta0vls8anqip2hd44lu77.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "823920890612-q3ifrv2rsbf163e65q3vb18h8297joot.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.wizh"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
