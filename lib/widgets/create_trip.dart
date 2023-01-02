@@ -23,6 +23,7 @@ class _ChooseTripTypeState extends State<ChooseTripType> {
   @override
   Widget build(BuildContext context) {
     return Container(
+        height: MediaQuery.of(context).size.height * 0.65,
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(

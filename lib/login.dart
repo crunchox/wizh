@@ -26,7 +26,7 @@ class _LoginState extends State<Login> {
               height: 140,
             ),
             Container(
-              height: MediaQuery.of(context).size.height - 150,
+              height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(

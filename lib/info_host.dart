@@ -156,8 +156,8 @@ class _InfoHostState extends State<InfoHost> {
                             width: 25,
                           ),
                           SizedBox(
-                            width: 82,
-                            height: 82,
+                            width: 63,
+                            height: 63,
                             child: CircleAvatar(
                               backgroundImage:
                                   AssetImage("assets/images/contoh.png"),

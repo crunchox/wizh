@@ -365,6 +365,9 @@ class _RegisterState extends State<Register> {
                       fontWeight: FontWeight.w500),
                 ),
               ],
+            ),
+            SizedBox(
+              height: 15,
             )
           ],
         ),

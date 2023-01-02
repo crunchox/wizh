@@ -58,11 +58,12 @@ class _NewTripState extends State<NewTrip> with SingleTickerProviderStateMixin {
                   //   borderRadius: BorderRadius.circular(8),
                   //   color: Color(0xFFD4BB87),
                   // ),
+                  padding: EdgeInsets.zero,
                   labelColor: Colors.black,
                   labelStyle: GoogleFonts.readexPro(
-                      fontSize: 16, fontWeight: FontWeight.w600),
+                      fontSize: 14, fontWeight: FontWeight.w500),
                   unselectedLabelStyle: GoogleFonts.readexPro(
-                      fontSize: 16, fontWeight: FontWeight.w400),
+                      fontSize: 14, fontWeight: FontWeight.w300),
                   onTap: (value) {
                     setState(() {});
                   },
@@ -108,8 +109,9 @@ class _NewTripState extends State<NewTrip> with SingleTickerProviderStateMixin {
                           ElevatedButton(
                             onPressed: () {
                               showModalBottomSheet(
+                                  isScrollControlled: true,
                                   context: context,
-                                  builder: (_) => const ChooseTripType());
+                                  builder: (context) => ChooseTripType());
                             },
                             child: Text(
                               "Create a New Trip",
@@ -222,13 +224,9 @@ class ListCard extends StatelessWidget {
                                     Text(
                                       "Healing ke Malang 5D4N",
                                       style: GoogleFonts.readexPro(
-                                          fontSize: 14,
+                                          fontSize: 12,
                                           fontWeight: FontWeight.w500),
                                     ),
-                                    SizedBox(
-                                      width: 24,
-                                    ),
-                                    Icon(Icons.cancel_outlined)
                                   ],
                                 ),
                                 SizedBox(
@@ -246,7 +244,7 @@ class ListCard extends StatelessWidget {
                                     Text(
                                       "5 Adults",
                                       style: GoogleFonts.readexPro(
-                                          fontSize: 11,
+                                          fontSize: 9,
                                           fontWeight: FontWeight.w400),
                                     ),
                                   ],
@@ -263,7 +261,7 @@ class ListCard extends StatelessWidget {
                                     Text(
                                       "5 Days - 4 Nights",
                                       style: GoogleFonts.readexPro(
-                                          fontSize: 11,
+                                          fontSize: 9,
                                           fontWeight: FontWeight.w400),
                                     ),
                                   ],
@@ -280,7 +278,7 @@ class ListCard extends StatelessWidget {
                                     Text(
                                       "Batu - Gn. Bromo - Pt. Balekambang",
                                       style: GoogleFonts.readexPro(
-                                          fontSize: 11,
+                                          fontSize: 9,
                                           fontWeight: FontWeight.w400),
                                     ),
                                   ],
@@ -298,7 +296,7 @@ class ListCard extends StatelessWidget {
                                     Text(
                                       "(Click for details)",
                                       style: GoogleFonts.readexPro(
-                                          fontSize: 11,
+                                          fontSize: 9,
                                           fontWeight: FontWeight.w400),
                                     ),
                                   ],
@@ -330,7 +328,6 @@ class ListCard extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        width: 333,
                         height: 27,
                         decoration: BoxDecoration(
                             color: Color(0xff20a70a),
@@ -422,13 +419,9 @@ class ListCard extends StatelessWidget {
                                     Text(
                                       "Healing ke Malang 5D4N",
                                       style: GoogleFonts.readexPro(
-                                          fontSize: 14,
+                                          fontSize: 12,
                                           fontWeight: FontWeight.w500),
                                     ),
-                                    SizedBox(
-                                      width: 24,
-                                    ),
-                                    Icon(Icons.cancel_outlined)
                                   ],
                                 ),
                                 SizedBox(
@@ -446,7 +439,7 @@ class ListCard extends StatelessWidget {
                                     Text(
                                       "5 Adults",
                                       style: GoogleFonts.readexPro(
-                                          fontSize: 11,
+                                          fontSize: 9,
                                           fontWeight: FontWeight.w400),
                                     ),
                                   ],
@@ -463,7 +456,7 @@ class ListCard extends StatelessWidget {
                                     Text(
                                       "5 Days - 4 Nights",
                                       style: GoogleFonts.readexPro(
-                                          fontSize: 11,
+                                          fontSize: 9,
                                           fontWeight: FontWeight.w400),
                                     ),
                                   ],
@@ -480,7 +473,7 @@ class ListCard extends StatelessWidget {
                                     Text(
                                       "Batu - Gn. Bromo - Pt. Balekambang",
                                       style: GoogleFonts.readexPro(
-                                          fontSize: 11,
+                                          fontSize: 9,
                                           fontWeight: FontWeight.w400),
                                     ),
                                   ],
@@ -498,7 +491,7 @@ class ListCard extends StatelessWidget {
                                     Text(
                                       "(Click for details)",
                                       style: GoogleFonts.readexPro(
-                                          fontSize: 11,
+                                          fontSize: 9,
                                           fontWeight: FontWeight.w400),
                                     ),
                                   ],
@@ -530,7 +523,6 @@ class ListCard extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        width: 333,
                         height: 27,
                         decoration: BoxDecoration(
                             color: Color(0xffda3d3d),
@@ -622,13 +614,9 @@ class ListCard extends StatelessWidget {
                                     Text(
                                       "Healing ke Malang 5D4N",
                                       style: GoogleFonts.readexPro(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w500),
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w600),
                                     ),
-                                    SizedBox(
-                                      width: 24,
-                                    ),
-                                    Icon(Icons.cancel_outlined)
                                   ],
                                 ),
                                 SizedBox(
@@ -663,7 +651,7 @@ class ListCard extends StatelessWidget {
                                     Text(
                                       "5 Days - 4 Nights",
                                       style: GoogleFonts.readexPro(
-                                          fontSize: 11,
+                                          fontSize: 9,
                                           fontWeight: FontWeight.w400),
                                     ),
                                   ],
@@ -680,7 +668,7 @@ class ListCard extends StatelessWidget {
                                     Text(
                                       "Batu - Gn. Bromo - Pt. Balekambang",
                                       style: GoogleFonts.readexPro(
-                                          fontSize: 11,
+                                          fontSize: 9,
                                           fontWeight: FontWeight.w400),
                                     ),
                                   ],
@@ -698,7 +686,7 @@ class ListCard extends StatelessWidget {
                                     Text(
                                       "(Click for details)",
                                       style: GoogleFonts.readexPro(
-                                          fontSize: 11,
+                                          fontSize: 9,
                                           fontWeight: FontWeight.w400),
                                     ),
                                   ],
@@ -730,7 +718,6 @@ class ListCard extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        width: 333,
                         height: 27,
                         decoration: BoxDecoration(
                             color: Color(0xffb4b4b4),
@@ -771,7 +758,9 @@ class ListCard extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () {
                   showModalBottomSheet(
-                      context: context, builder: (_) => const ChooseTripType());
+                      isScrollControlled: true,
+                      context: context,
+                      builder: (context) => const ChooseTripType());
                 },
                 child: Text(
                   "Create a New Trip",
@@ -785,7 +774,8 @@ class ListCard extends StatelessWidget {
                         RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(35.0),
                     )),
-                    fixedSize: MaterialStateProperty.all(Size(311, 56))),
+                    fixedSize: MaterialStateProperty.all(
+                        Size(MediaQuery.of(context).size.width / 1.3, 56))),
               ),
             ))
       ],

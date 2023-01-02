@@ -48,7 +48,7 @@ class _OnboardingState extends State<Onboarding> {
                 ],
               ),
               SizedBox(
-                height: 162,
+                height: MediaQuery.of(context).size.height / 4 - 50,
               ),
               Text(
                 "REFRESHING HAS\nNEVER BEEN EASIER\nWITH US",
