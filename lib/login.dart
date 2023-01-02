@@ -3,7 +3,10 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:wizh/login_controller.dart';
 import 'package:wizh/register.dart';
 
 class Login extends StatefulWidget {
@@ -14,6 +17,8 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  final controller = Get.put(LoginController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -187,15 +192,39 @@ class _LoginState extends State<Login> {
                     SizedBox(
                       height: 15,
                     ),
-                    Center(
-                      child: SizedBox(
-                        height: 38,
-                        width: 180,
-                        child: Image(
-                            image:
-                                AssetImage('assets/images/google_signin.png')),
-                      ),
-                    ),
+                    Obx((() {
+                      if (controller.googleAccount.value == null)
+                        return InkWell(
+                          onTap: () {
+                            controller.login();
+                          },
+                          child: Center(
+                            child: SizedBox(
+                              height: 38,
+                              width: 180,
+                              child: Image(
+                                  image: AssetImage(
+                                      'assets/images/google_signin.png')),
+                            ),
+                          ),
+                        );
+                      else
+                        return InkWell(
+                          onTap: () {
+                            controller.logout();
+                          },
+                          child: Center(
+                              child: Column(
+                            children: <Widget>[
+                              Text("Tap to Logout"),
+                              Text(
+                                  controller.googleAccount.value?.displayName ??
+                                      ""),
+                              Text(controller.googleAccount.value?.email ?? "")
+                            ],
+                          )),
+                        );
+                    })),
                     SizedBox(
                       height: 30,
                     ),
@@ -237,5 +266,9 @@ class _LoginState extends State<Login> {
         ),
       )),
     );
+  }
+
+  void signinWithGoogle() {
+    GoogleSignIn().signIn();
   }
 }

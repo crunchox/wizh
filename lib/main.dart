@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:wizh/home_bar.dart';
 import 'package:wizh/login.dart';
 import 'package:wizh/new_trip.dart';
@@ -9,6 +10,13 @@ import 'package:wizh/trip.dart';
 void main() {
   runApp(const MyApp());
 }
+
+final GoogleSignIn _googleSignIn = GoogleSignIn(
+  scopes: [
+    'email',
+    'https://www.googleapis.com/auth/contacts.readonly',
+  ],
+);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
